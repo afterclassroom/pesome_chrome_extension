@@ -1,0 +1,28 @@
+{
+  "name": "PeTick",
+  "version": "0.1",
+  "description": "",
+  "manifest_version": 2,
+  "browser_action": {
+      "default_icon": "images/icon_16.png",
+      "default_popup": "pages/popup.html"
+  },
+  "icons": {
+    "16": "images/icon_16.png",
+    "128": "images/icon_128.png"
+  },
+  "content_scripts": [{
+    "matches": ["http://192.168.80.128:3000/robots.txt*"],
+      "css": [ "css/main.css" ],
+      "js": [
+        "js/xhr-helper.js",
+        "js/context-core.js"
+      ],
+	  "run_at": "document_start"
+  }],
+  "permissions": [
+  	  "http://192.168.80.128:3000/extensions/*",
+      "tabs"
+  ],
+  "content_security_policy": "script-src 'self' https://twitter.github.com; object-src 'self'"
+}
