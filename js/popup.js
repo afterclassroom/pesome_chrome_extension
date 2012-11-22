@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-var URL = 'http://192.168.0.210:3000';
+var URL = 'http://pesome.com';
 
 chrome.tabs.getSelected(null, function(tab) {
 	var link = tab.url;

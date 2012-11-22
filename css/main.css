@@ -15,6 +15,10 @@
         white-space: normal;
 word-wrap: break-word;
     }
+.img-extension img{
+height: 43px;
+border-radius:5px;
+}
   .embed-container {
     position: relative;
     padding-top: 30px; /* IE6 workaround*/
