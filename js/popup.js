@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-var URL = 'http://192.168.0.211:3000';
+var URL = 'http://dev.afterclassroom.com';
 
 chrome.tabs.getSelected(null, function(tab) {
 	var link = tab.url;
@@ -60,7 +60,7 @@ function loadAction() {
 	$('#tick_to_click').mouseleave(doTimeout);
 	$('#send_bt').click(function() {
 		if ($('input[name="classroom_ids[]"]:checked').length > 0) {
-			//$('#send_bt').button('loading');
+			$('#send_bt').button('loading');
 			saveTick();
 		} else {
 			$('#alertModal').modal('show');
@@ -76,6 +76,14 @@ function loadAction() {
 			var link = tab.url;
 			$("#link").val(link);
 		});
+	}
+	if ($("#images_carousel").length > 0){
+		var slider = $("#images_carousel")
+      .carousel({
+        interval: 5000000
+      }).bind('slid', function() {
+        $('#link_image').val($('div.carousel-inner div.active img').attr('src'));
+      });
 	}
 }
 
@@ -101,3 +109,16 @@ function callApi(path, method, params) {
 		}
 	});
 }
+
+function fnchecked(blnchecked)
+    {
+      if(blnchecked)
+      {
+        $('#images_carousel').hide();
+      }
+      else
+      {
+        $('#images_carousel').show();
+      }
+
+    }
