@@ -90,7 +90,7 @@ function loadAction() {
 function saveTick() {
 	var ft = $('#form_tick');
 	var link = ft.attr('action');
-	var params = unescape(ft.serialize());
+	var params = ft.serialize();
 	callApi(link, 'POST', params);
 }
 
