@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-var URL = 'http://192.168.0.215:3000';
+var URL = 'http://dev.afterclassroom.com';
 
 chrome.tabs.getSelected(null, function(tab) {
 	var link = tab.url;
