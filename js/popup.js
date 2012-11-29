@@ -99,6 +99,9 @@ function loadAction() {
 }
 
 function saveTick() {
+	if ($('#fldcheckbox').is(':checked')) {
+		$('#link_image').remove();
+	}
 	var ft = $('#form_tick');
 	var link = ft.attr('action');
 	var params = ft.serialize();
