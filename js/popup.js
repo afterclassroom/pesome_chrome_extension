@@ -87,7 +87,14 @@ function loadAction() {
       });
 	}
 	$('#fldcheckbox').click(function(){
-		fnchecked($(this).checked);
+		if($(this).is(':checked'))
+      {
+        $('#images_carousel').hide();
+      }
+      else
+      {
+        $('#images_carousel').show();
+      }
 	});
 }
 
@@ -113,16 +120,3 @@ function callApi(path, method, params) {
 		}
 	});
 }
-
-function fnchecked(blnchecked)
-    {
-      if(blnchecked)
-      {
-        $('#images_carousel').hide();
-      }
-      else
-      {
-        $('#images_carousel').show();
-      }
-
-    }
