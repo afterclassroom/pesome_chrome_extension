@@ -12,7 +12,7 @@
     "128": "images/icon_128.png"
   },
   "content_scripts": [{
-    "matches": ["http://192.168.0.211:3000/robots.txt*"],
+    "matches": ["http://192.168.0.215:3000/robots.txt*"],
       "css": [ "css/main.css" ],
       "js": [
         "js/xhr-helper.js",
@@ -21,7 +21,7 @@
 	  "run_at": "document_start"
   }],
   "permissions": [
-  	  "http://192.168.0.211:3000/extensions/*",
+  	  "http://192.168.0.215:3000/extensions/*",
       "tabs"
   ],
   "content_security_policy": "script-src 'self' https://twitter.github.com; object-src 'self'"
