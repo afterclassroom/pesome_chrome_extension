@@ -86,6 +86,9 @@ function loadAction() {
         $('#link_image').val($('div.carousel-inner div.active img').attr('src'));
       });
 	}
+	$('#fldcheckbox').click(function(){
+		fnchecked($(this).checked);
+	});
 }
 
 function saveTick() {
