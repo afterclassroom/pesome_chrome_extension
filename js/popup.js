@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-var URL = 'http://dev.afterclassroom.com';
+var URL = 'http://pesome.com';
 
 chrome.tabs.getSelected(null, function(tab) {
 	var link = tab.url;
