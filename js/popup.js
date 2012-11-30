@@ -119,7 +119,7 @@ function callApi(path, method, params) {
 			loadAction();
 		},
 		error : function(response) {
-			$('#content').html('Error. Status returned: ' + xhr.status);
+			$('#content').html("PeTick can't attach this link.");
 		}
 	});
 }
