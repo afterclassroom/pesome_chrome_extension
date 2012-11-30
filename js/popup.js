@@ -53,7 +53,7 @@ function loadAction() {
 		var link = fm.attr('action');
 		var params = unescape(fm.serialize());
 		callApi(link, 'POST', params);
-		$('.login_backgroud').html('<img src="../images/loading.gif"/>');
+		$(this).button('loading');
 	});
 	$('.click-ctick').click(function() {
 		clearTimeout(timeout);
